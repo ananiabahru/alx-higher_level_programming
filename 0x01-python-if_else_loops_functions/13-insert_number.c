@@ -1,4 +1,3 @@
-#include <stdlib.h>
 #include "lists.h"
 
 /**
@@ -9,41 +8,21 @@
 */
 listint_t *insert_node(listint_t **head, int number)
 {
-int flag = 0;
-listint_t *new_node = NULL, *actual = NULL, *after = NULL;
-if (head == NULL)
+listint_t *node = *head, *new;
+new = malloc(sizeof(listint_t));
+if (new == NULL)
 return (NULL);
-new_node = malloc(sizeof(listint_t));
-if (!new_node)
-return (NULL);
-new_node->n = number, new_node->next = NULL;
-if (*head == NULL)
+new->n = number;
+
+if (node == NULL || node->n >= number)
 {
-*head = new_node;
-return (*head);
+new->next = node;
+*head = new;
+return (new);
 }
-actual = *head;
-if (number <= actual->n)
-{
-new_node->next = actual, *head = new_node;
-return (*head);
+while (node && node->next && node->next->n < number)
+node = node->next;
+new->next = node->next;
+node->next = new;
+return (new);
 }
-if (number > actual->n && !actual->next)
-{
-actual->next = new_node;
-return (new_node);
-}
-after = actual->next;
-while (actual)
-{
-if (!after)
-actual->next = new_node, flag = 1;
-else if (after->n == number)
-actual->next = new_node, new_node->next = after, flag = 1;
-else if (after->n > number && actual->n < number)
-actual->next = new_node, new_node->next = after, flag = 1;
-if (flag)
-break;
-after = after->next, actual = actual->next;
-}
-return (new_node);
