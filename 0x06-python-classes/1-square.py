@@ -1,15 +1,21 @@
 #!/usr/bin/python3
 # 1-square.py by Anania Baharu
-"""Defines a class square """
+"""Define a class Square."""
 
-class square:
-    """Represents a square"""
+class Square:
+
+    """Represent a square."""
+
+
 
     def __init__(self, size):
-        """Initializing  a 1square.
-        Args: 
-            size - represnets the size of the 1square defined.
+
+        """Initialize a new Square.
+
+        Args:
+
+            size (int): The size of the new square.
+
         """
 
         self.__size = size
-
