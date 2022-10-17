@@ -1,28 +1,36 @@
-#!/user/bin/python3
+#!/usr/bin/python3
+
 """
-This is a class rectangle that defines a rectangle by:(based on 0-rectangle.py)
+
+This module defines a class - Rectangle
+
 """
+
+
+
+
+
 class Rectangle:
 
-    """this represents a rectangle"""
+    """
+
+    This class has two attributes
+
+    width
+
+    height
+
+    both will have property and setter function definition
+
+    """
 
 
 
     def __init__(self, width=0, height=0):
 
-        """Initializing this rectangle class
+        """
 
-        Args:
-
-            width: represents the width of the rectangle
-
-            height: represents the height of the rectangle
-
-        Raises:
-
-            TypeError: if size is not integer
-
-            ValueError: if size is less than zero
+        instantiates width and height
 
         """
 
@@ -36,7 +44,11 @@ class Rectangle:
 
     def width(self):
 
-        """retrieves width attribute"""
+        """
+
+        function to return width if setter checks have passed
+
+        """
 
         return self.__width
 
@@ -46,7 +58,17 @@ class Rectangle:
 
     def width(self, value):
 
-        """sets width attribute"""
+        """
+
+        setter validates if value is >= 0
+
+        Raises:
+
+        TypeError
+
+        ValueError
+
+        """
 
         if not isinstance(value, int):
 
@@ -64,7 +86,11 @@ class Rectangle:
 
     def height(self):
 
-        """retrieves height attribute"""
+        """
+
+        function to return height if setter checks have passed
+
+        """
 
         return self.__height
 
@@ -74,7 +100,17 @@ class Rectangle:
 
     def height(self, value):
 
-        """sets height attribute"""
+        """
+
+        setter validates if value is >= 0
+
+        Raises:
+
+        TypeError
+
+        ValueError
+
+        """
 
         if not isinstance(value, int):
 
