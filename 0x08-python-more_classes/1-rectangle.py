@@ -4,31 +4,31 @@ This is a class rectangle that defines a rectangle by:(based on 0-rectangle.py)
 """
 class Rectangle:
 
-    """rectangle class"""
+    """this represents a rectangle"""
+
+
 
     def __init__(self, width=0, height=0):
 
-        """Instantiation of width and height"""
+        """Initializing this rectangle class
 
-        if not isinstance(width, int):
+        Args:
 
-            raise TypeError("width must be an integer")
+            width: represents the width of the rectangle
 
-        if width < 0:
+            height: represents the height of the rectangle
 
-            raise ValueError("width must be >= 0")
+        Raises:
 
-        if not isinstance(height, int):
+            TypeError: if size is not integer
 
-            raise TypeError("height must be an integer")
+            ValueError: if size is less than zero
 
-        if height < 0:
+        """
 
-            raise ValueError("height must be >= 0")
+        self.width = width
 
-        self.__width = width
-
-        self.__height = height
+        self.height = height
 
 
 
@@ -36,19 +36,9 @@ class Rectangle:
 
     def width(self):
 
-        """retrieve width"""
+        """retrieves width attribute"""
 
         return self.__width
-
-
-
-    @property
-
-    def height(self):
-
-        """retrieve height"""
-
-        return self.__height
 
 
 
@@ -56,7 +46,7 @@ class Rectangle:
 
     def width(self, value):
 
-        """set height"""
+        """sets width attribute"""
 
         if not isinstance(value, int):
 
@@ -70,11 +60,21 @@ class Rectangle:
 
 
 
+    @property
+
+    def height(self):
+
+        """retrieves height attribute"""
+
+        return self.__height
+
+
+
     @height.setter
 
     def height(self, value):
 
-        """Set height"""
+        """sets height attribute"""
 
         if not isinstance(value, int):
 
