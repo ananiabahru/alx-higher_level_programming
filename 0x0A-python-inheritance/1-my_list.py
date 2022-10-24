@@ -1,27 +1,10 @@
 #!/usr/bin/python3
-
-"""MyList
-
-"""
-
-
-
-
+"""MyList"""
 
 class MyList(list):
+    """Contains list"""
 
-    """Contains list
+def print_sorted(self):
+    """Prints self in sorted format"""
 
-    """
-
-
-
-    def print_sorted(self):
-
-        """Prints self in sorted format
-
-        """
-
-
-
-        print(sorted(self))
+    print(sorted(self))
