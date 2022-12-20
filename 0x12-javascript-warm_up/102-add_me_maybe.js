@@ -1,4 +1,5 @@
 #!/usr/bin/node
+
 module.exports = {
     /**
      * addMeMaybe - Invokes a function after incrementing its argument by 1.

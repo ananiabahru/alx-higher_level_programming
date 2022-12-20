@@ -1,4 +1,5 @@
 #!/usr/bin/node
+
 /**
  * add - Computes the sum of 2 numbers.
  * @param {Number} a - The first number.

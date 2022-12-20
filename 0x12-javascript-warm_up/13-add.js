@@ -1,4 +1,5 @@
 #!/usr/bin/node
+
 module.exports = {
   /**
    * add - Computes the sum of 2 numbers.

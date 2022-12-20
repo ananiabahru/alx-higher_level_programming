@@ -1,4 +1,5 @@
 #!/usr/bin/node
+
 /**
  * nPrint - Prints a string n times.
  * @param {Number} n - The number of times to print the string.

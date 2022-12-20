@@ -1,4 +1,5 @@
 #!/usr/bin/node
+
 /**
  * factorial - Computes the factorial of a number.
  * @param {Number} num - The number.

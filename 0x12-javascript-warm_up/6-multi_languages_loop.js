@@ -1,4 +1,5 @@
 #!/usr/bin/node
+
 const texts = [
     'C is fun',
     'Python is cool',

@@ -1,4 +1,5 @@
 #!/usr/bin/node
+
 /**
  * square - Prints a square with 'X'.
  * @param {Number} size - The size of the square.
