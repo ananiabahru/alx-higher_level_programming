@@ -1,4 +1,3 @@
 #!/bin/bash
-#  Bash script that takes in URL the server will accept
-curl -silk -X OPTIONS "$1" | grep -oiE '
-Allow: .+' | cut -d ' ' -f2-
+# Bash script that takes in URL the server will accept
+curl -sI "$1" | grep "Allow" | cut -d " " -f 2-
